@@ -20,7 +20,7 @@ using System.Web.Http.Cors;
 
 namespace TokenAuthentication.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [EnableCors("http://localhost:49529", "*", "*")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
