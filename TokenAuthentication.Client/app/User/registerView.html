@@ -1,0 +1,21 @@
+﻿<form name="registerForm" ng-submit="vm.registerUser()" novalidate>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" placeholder="username (email)" ng-model="vm.userData.email" required />
+        <span ng-show="registerForm.email.$error.required" class="text-warning">Email Required</span>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" placeholder="password" ng-model="vm.userData.password" required />
+        <span ng-show="registerForm.password.$error.required" class="text-warning">Password Required</span>
+    </div>
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" name="confirm" class="form-control" placeholder="Confirm Password" ng-model="vm.userData.password" required />
+        <span ng-show="registerForm.confirm.$error.required" class="text-warning">Confirmation Required</span>
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="registerForm.$invalid">
+        Register
+    </button>
+    <div ng-show="vm.message">{{vm.message}}</div>
+</form>

@@ -40,7 +40,7 @@ namespace TokenAuthentication.Providers
             }
 
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin",
-                new[] { "http://localhost:49529" });
+                new[] { "http://localhost:55371" });
 
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(userManager,
                OAuthDefaults.AuthenticationType);

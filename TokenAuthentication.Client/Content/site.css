@@ -1,0 +1,9 @@
+﻿.main-container{
+    padding-top: 50px;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}

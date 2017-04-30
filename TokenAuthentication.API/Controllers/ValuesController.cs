@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace TokenAuthentication.Controllers
 {
+    [EnableCors("http://localhost:55371", "*", "*")]
     [Authorize]
     public class ValuesController : ApiController
     {
